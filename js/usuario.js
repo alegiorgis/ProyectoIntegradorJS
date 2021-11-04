@@ -1,3 +1,7 @@
+// Creación de objeto mediante clases y métodos
+
+//Creo un usuario en funcion del nombre y ocupacion
+
 class Usuario {
     constructor(nombre, ocupacion) {
         this.nombre = nombre;
@@ -18,6 +22,8 @@ class Usuario {
     }
 }
 
+
+//El usuario creado lo muestro en el glass panel
 
 let usuario;
 

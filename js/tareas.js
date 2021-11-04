@@ -1,3 +1,6 @@
+
+// Creación de objeto mediante clases y métodos
+
 class Tarea {
     constructor(categoria, nombre, descripcion, prioridad, imagen, deadline, id) {
     this.nombre = nombre;
@@ -14,6 +17,9 @@ class Tarea {
     this.id = `tarea_${id}`;
     }  
 }
+
+
+// Metodo para guardar, agregar y eliminar una tarea
 
 class TareasModel  {
     constructor(){
@@ -39,6 +45,8 @@ class TareasModel  {
     
 }
 
+
+// Metodo para ver las tareas segun la categoria elegida
 
 class TareasView {
 
@@ -76,13 +84,15 @@ class TareasView {
            }
         } else {
             this.html = `   <div id="noHayTareas">
-                                <p>Aún no hay tareas por aquí</p>
+                                <p>Todavia no cargaste ninguna tarea</p>
                             </div>
                         `
         }
    
         return this.html;
     }
+
+    //Ordena las tareas segun los criterios seleccionados
 
     ordenarTareas(criterio, arrayTareas) {
 

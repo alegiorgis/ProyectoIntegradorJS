@@ -1,3 +1,5 @@
+
+
 class Router {
     constructor(app){
       $(window).on("hashchange", e => this.onRouteChange(e));
