@@ -29,6 +29,9 @@ $("#cargaTarea__form").submit((event)=>{
 
 $("#ordenarTareas").change( () => router.onRouteChange())
 
+
+// Eliminar tareas
+
 $("#dashboard__borrarDatos").on('click', (e)=> {
  localStorage.clear();
  location.reload();
