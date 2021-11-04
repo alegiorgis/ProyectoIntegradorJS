@@ -1,15 +1,15 @@
-
-
 //localStorage.clear()
 $("#deadline_tarea").datepicker();
 
 
 const router = new Router(new TareasController(new TareasModel(), new TareasView()));
 
-//Si hay un usuario en local storage lo carga, sino presenta el formulario
+//Si hay un usuario en local storage lo carga
 if(localStorage.getItem('usuario')) {
  cargarUsuario();
  router.customRoute("todas");  
+
+ //Si NO hay un usuario en local storage  presenta el formulario
 } else {
  router.customRoute("usuario");
 }

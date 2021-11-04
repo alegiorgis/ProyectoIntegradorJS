@@ -1,3 +1,5 @@
+//Funciones de la interfaz para mostar y ocultar tanto formulario como el glass del panel
+
 
 function mostrarFormularioUsuario(callback) {
     $("#welcome").fadeIn(1000);   
