@@ -1,0 +1,19 @@
+$light-text: #EF8D8A;
+$dark-text: #CC6A66;
+
+$font-weights : (
+    "regular": 400,
+    "medium": 500,
+    "bold": 600
+);
+
+$gradient-first-color : #ffff91;
+$gradient-second-color: #e06f00;
+
+$breakpoints: (
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+) !default;
+
+

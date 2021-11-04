@@ -1,0 +1,72 @@
+.boton {
+    @include diagonal-gradient($gradient-first-color, $gradient-second-color);
+    border-radius: 3rem;
+    border: none;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: white;
+    font-weight:weight("regular");
+    box-shadow: 0 8px 15px rgba(0,0,0, 0.1);
+}
+
+#agregarTarea {   
+    flex: 1;
+    @include diagonal-gradient($gradient-first-color, $gradient-second-color);
+    box-shadow: 5px 5px 5px rgba(138, 125, 125, 0.1);
+    border-radius: 2rem;
+    padding: 1.3rem;
+    margin: 1rem 0;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    
+    // @include flexCenter(column);
+
+   
+    img { 
+        width: 30%;
+    }
+
+    h2 {
+        color: white;
+        font-weight: weight("bold");
+        margin-bottom: 1rem;
+    }
+}
+
+.boton, #agregarTarea {
+    
+    &:hover{
+        @include diagonal-gradient(lighten($gradient-first-color, 5%), lighten($gradient-second-color, 5%));
+    }
+
+    &:active{
+        @include diagonal-gradient(darken($gradient-first-color, 5%), darken($gradient-second-color, 5%));
+        -webkit-box-shadow: inset 0px 0px 1rem rgba(122,122,122, 0.4);
+        -moz-box-shadow: inset 0px 0px 1rem rgba(122,122,122, 0.4);
+        box-shadow: inset 0px 0px 1rem rgba(122,122,122, 0.4); 
+    }
+
+}
+
+.completarTarea {
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    font-size: 2rem;
+    color: $gradient-first-color;
+
+    &:hover{
+        color: lighten($gradient-second-color, 5%);
+    }
+
+    &:active{
+        color: darken($gradient-second-color, 5%);
+    }
+
+
+}

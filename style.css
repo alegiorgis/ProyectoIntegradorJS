@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #CC6A66;
+    font-weight: 600;
+    font-size: 2.5rem;
+    opacity: 0.8;
+}
+
+h2 {
+    color: #EF8D8A;
+    font-weight: 500;
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #CC6A66;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+p, input::placeholder {
+    color: #CC6A66;
+    opacity: 0.8;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+input::placeholder {
+    text-align: center;
+    opacity: 0.5;
+}
+
+
+main {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(280deg, #ffffb1 0, #ffff91 12.5%, #ffff6f 25%, #ffe949 37.5%, #f8d110 50%, #f0b800 62.5%, #e9a000 75%, #e48800 87.5%, #e06f00 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly ;
+}
+
+.link{
+    display: flex;
+    margin: 1rem 0rem;
+    padding: 0rem 3rem;
+    align-items: center;
+}
+
+.link h2 {
+    padding: 0rem 2rem;
+}
+.tareas { 
+margin: 2rem;
+flex: 3;
+display: flex;
+flex-direction: column;
+}
+
+#cards {
+    flex: 7;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.card {
+    display: flex;
+    background: linear-gradient(
+        to left top, 
+        rgba(255,255,255,0.2),
+         rgba(255,255,255,0.8)) ;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 1rem rgba(122,122,122, 0.2);
+    /* justify-content: space-between; */
+}
+
+.card-img {
+    flex: 1;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    background-color: white;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 0 1rem 0;
+}
+
+.card p {
+    font-size: 0.8rem;
+}
+
+.percentage {
+    /* position: absolute;
+    right: 10%; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    background: linear-gradient(280deg, #ffffb1 0, #ffff91 12.5%, #ffff6f 25%, #ffe949 37.5%, #f8d110 50%, #f0b800 62.5%, #e9a000 75%, #e48800 87.5%, #e06f00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+.card-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.agregarTarea {   
+    background: linear-gradient(280deg, #ffffb1 0, #ffff91 12.5%, #ffff6f 25%, #ffe949 37.5%, #f8d110 50%, #f0b800 62.5%, #e9a000 75%, #e48800 87.5%, #e06f00 100%);
+    border-radius: 2rem;
+    padding: 1.3rem;
+    width:65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.agregarTarea img {
+    max-width: 30%;
+}
+
+.agregarTarea h2 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.user img {
+    max-width: 50%;
+}
+
+.status {
+    flex: 1;
+}
+
+.status input {
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255,255,255, 0.5), 
+        rgba(255,255,255, 0.1));
+    border-radius: 2rem;
+    border: none;
+    width:40%;
+    padding: 0.5rem;
+    margin-top: 8rem;
+    
+}
+
+.progress-bar {
+    background: linear-gradient(280deg, #ffffb1 0, #ffff91 12.5%, #ffff6f 25%, #ffe949 37.5%, #f8d110 50%, #f0b800 62.5%, #e9a000 75%, #e48800 87.5%, #e06f00 100%);
+    width: 100%;
+    height: 20%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::after{
+    content: "";
+    width:100%;
+    height: 100%;
+    background: rgb(236, 236, 236);
+    position: absolute;
+    left: 40%;
+}
+

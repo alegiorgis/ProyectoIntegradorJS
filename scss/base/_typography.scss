@@ -1,0 +1,35 @@
+
+html {
+    font-family: "Poppins", sans-serif;
+    // font-size: 16px;
+    font-size: clamp(13px, 0.83vw, 18px);
+  }
+  
+  h1 {
+    color: $dark-text;
+    font-weight: weight("bold");
+    opacity: 0.8;
+    font-size: 2.5rem;
+  }
+  
+  h2, label {
+    color: $light-text;
+    font-weight: weight("medium");
+    opacity: 0.8;
+    font-size: 1rem;
+  }
+  
+  h3 {
+    color: $dark-text;
+    font-weight: weight("bold");
+    opacity: 0.8;
+    font-size: 1.5rem;
+  }
+  
+  p {
+    color: $dark-text;
+    opacity: 0.8;
+    font-size: 1rem;
+    font-weight: weight(regular);
+  }
+  

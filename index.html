@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--Meta etiquetas /SEO-->
+        <!-- Meta Description -->
+        <meta name="description" content="MF Vestidos es una firma de vestidos de novias que cuenta con diseños propios y esclusivos para cada novia. El atelier esta en barrio Cofico de la provincia de Córdoba">
+        <!-- Meta Keywords -->
+        <meta name="keywords" content="boda, casamiento, novia, novios, vestido, blanco, atelier, diseñadora, modista, nupcial, moda, alta costura, coleccion, fiesta, casarse">
+        <!-- Meta Author -->
+        <meta name="author" content="Ale Giorgis">
+        <!-- Meta Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="MF Vestidos - Vestidos de novias a medida y alta costura ">    
+        <meta property="og:description" content="Vestidos de novias a medida y alta costura diseñados exclusivamente para cada novia, para que su vestido sea el de sus sueños.">    
+        <meta property="og:image" content="https://i.ibb.co/QpJktXv/favicon.jpg">    
+        <meta property="og:url" content="https://mfdress.000webhostapp.com/">   
+        <meta property="og:site_name" content="MFVestidos">
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
+
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Wedding Planner</title>
+</head>
+<body>
+    <main>
+        <section id="welcome" class="welcome">
+            <h1 class="welcome__title">¡Wedding Planner!</h1>
+            <form action="" id="welcome__form">
+                <div class="welcome__form__item">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input required type="text" id="usuario_nombre" name="usuario_nombre" maxlength="25" placeholder="Ingrese su nombre">
+                </div>
+                
+                <div class="welcome__form__item">
+                    <label for="ocupacion">Ocupación</label>
+                    <input required type="text" id="usuario_ocupacion" name="usuario_ocupacion" maxlength="25" placeholder="Ingrese su profesion">
+                </div>
+                <button type="submit" value="enviar" class="boton">Enviar</button>
+            </form>
+        </section>
+
+        <section id="cargaTarea" class="cargaTarea">
+            <h1 class="cargaTarea__title">Carga de tareas</h1>
+            <form action="" id="cargaTarea__form">
+                <div class="cargaTarea__form__item">
+                    <label for="categoria_tarea">Categoría de tarea</label>
+                    <select name="categoria_tarea" id="categoria_tarea">
+                        <option value="catering">Catering</option>
+                        <option value="decoracion">Decoracion</option>
+                        <option value="fotos">Fotos</option>
+                        <option value="invitados">Invitados</option>
+                        <option value="otros">Otros</option>
+                      </select>
+                </div>
+                
+                <div class="cargaTarea__form__item">
+                    <label for="nombre_tarea">Nombre de tarea</label>
+                    <input type="text" required id="nombre_tarea" name="nombre_tarea" maxlength="30" placeholder="Máximo 30 caracteres">
+                </div>
+
+                <div class="cargaTarea__form__item">
+                    <label for="descripcion_tarea">Descripción de tarea</label>
+                    <input type="textarea" required id="descripcion_tarea" name="descripcion_tarea" maxlength="40" placeholder="Máximo 40 caracteres">
+                </div>
+
+                <div class="cargaTarea__form__item">
+                    <label for="prioridad_tarea">Prioridad</label>
+                    <select name="prioridad_tarea" id="prioridad_tarea">
+                        <option value="alta">Alta</option>
+                        <option value="media">Media</option>
+                        <option value="baja">Baja</option>
+                      </select>
+                </div>
+
+                <div class="cargaTarea__form__item">
+                    <label for="deadline_tarea">Deadline</label>
+                    <input type="text" id="deadline_tarea" required placeholder="Fecha límite">                   
+                </div>
+
+                <button id="cargaTarea__form__button" type="submit" value="enviar" class="boton">Cargar Tarea</button>
+            </form>
+        </section>
+
+        <div id="grayOverlay" class="grayOverlay"></div>
+
+        
+
+        <section id="glass">
+            <div class="glass">
+                <div class="dashboard">
+                    <div id="dashboard__user">
+                    </div>
+                    <div class="links">
+                        <div class="link" id="link__todas">
+                            <a href="#/todas">
+                                <img src="img/todas_logo.svg">
+                                <h2>Todas</h2>
+                            </a>
+                        </div>
+
+                        <div class="link" id="link__catering">
+                            <a href="#/catering">
+                                <img src="img/catering_logo.svg">
+                                <h2>Catering</h2>
+                            </a>
+                        </div>
+
+                        <div class="link" id="link__decoracion">
+                            <a href="#/decoracion">
+                                <img src="img/decoracion_logo.svg">
+                                <h2>decoracion</h2>
+                            </a>
+                        </div>
+
+                        <div class="link" id="link__fotos">
+                            <a href="#/fotos">
+                                <img src="img/fotos_logo.svg">
+                                <h2>Fotos</h2>
+                            </a>
+                        </div>
+                        <div class="link" id="link__invitados">
+                            <a href="#/invitados">
+                                <img src="img/invitados_logo.svg">
+                                <h2>Invitados</h2>
+                            </a>
+                        </div>
+                        <div class="link" id="link__otros">
+                            <a href="#/otros">
+                                <img src="img/otros_logo.svg">
+                                <h2>Otros</h2>
+                            </a>
+                        </div>
+                    </div>
+                    <button id="agregarTarea">
+                        <h2>Agregar tarea</h2>
+                        <img src="img/agregar_tarea.svg" alt="">
+                    </button>
+                    <div class="dashboard__borrarDatos">
+                        <p id="dashboard__borrarDatos">VOLVER AL HOME</p>
+                    </div>
+                </div>
+                <div class="tareas">
+                    <div class="tareas__header">
+                        <div class="tareas__header__tituloOrden">
+                            <h1>Wedding Planner</h1>
+                            <label for="ordenarTareas">Ordenar Tareas Por</label>
+                                <select name="ordenarTareas" id="ordenarTareas">
+                                <option value="prioridad_mayor">Mayor Prioridad</option>
+                                <option value="prioridad_menor">Menor Prioridad</option>
+                                <option value="deadline_masProximo">Deadline Más Próximo</option>
+                                <option value="deadline_menosProximo">Deadline Menos Próximo</option>
+                                <option value="carga_primero" selected>Cargadas Primero</option>
+                                <option value="carga_ultimo">Cargadas Último</option>
+                            </select>
+                        </div>
+                        <div id="tareas__header__fechaClima" class="tareas__header__fechaClima">
+                        </div>
+                    </div>
+
+                    <div id="cards">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/moment.min.js"></script>
+
+    
+    <script src="js/interfaz.js"></script>
+    <script src="js/usuario.js"></script>
+    <script src="js/tareas.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/weather_localization_date.js"></script>
+</body>
+</html>

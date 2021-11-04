@@ -1,0 +1,100 @@
+input, textarea,select {
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255,255,255, 0.7), 
+        rgba(255,255,255, 0.2));
+    border-radius: 2rem;
+    border: none;
+    padding: 0.7rem;
+    margin: 1rem;
+
+    &::placeholder {
+        @extend p;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        opacity: 0.5;
+    }
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+.welcome {
+    @include glass;
+    @include flexCenter(column);
+    max-height: 70vh;
+    padding: 3rem;
+    width: 30%;
+    border-radius: 2rem;
+    z-index: 5;
+
+    .welcome__title {
+        @include flexCenter(row);
+        flex: 1;
+
+    }
+
+    #welcome__form {
+        @include flexCenter(column);
+        justify-content: space-around;
+        flex:3;
+
+        .welcome__form__item {
+            @include flexCenter(column);
+            margin-bottom: 2rem;
+
+            label {
+                margin-bottom: 1rem;
+            }
+            }
+        }
+    }
+
+    #welcome {
+        display: none;
+    }
+
+    .cargaTarea {
+        position: absolute;
+        @include glass;
+        @include flexCenter(column);
+        max-height: 70vh;
+        max-width: 40%;
+        border-radius: 2rem;
+        z-index: 7;
+        padding: 3rem;
+    
+        .cargaTarea__title {
+            @include flexCenter(row);
+            flex: 1;
+        }
+    
+        #cargaTarea__form {
+            @include flexCenter(column);
+            justify-content: space-around;          
+            flex:5;
+            align-items: flex-start;
+
+            .cargaTarea__form__item {
+                @include flexCenter(row);
+                margin-bottom: 2rem;
+                justify-content: space-between;
+                justify-items: center;
+                width: 100%;
+    
+                label {
+                    margin-right: 3rem;
+                }
+            }
+
+            .boton {
+                align-self: center;
+            }
+        }
+    }
+
+    #cargaTarea{
+        display: none;
+    }
+    

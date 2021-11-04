@@ -1,0 +1,238 @@
+main {
+    @include diagonal-gradient($gradient-first-color, $gradient-second-color);
+    @include flexCenter(column);
+    height: 100vh;
+    margin: 0 auto;
+}
+
+
+#glass {
+    display: none;
+}
+
+.glass {
+    height: 80vh;
+    width: 60%;
+    @include glass;
+    border-radius: 2rem;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    margin: auto;
+    inset: 0;
+}
+
+.dashboard { 
+    @include glass;    
+    @include flexCenter(column);
+    flex: 1;
+    text-align: center;
+    border-radius: 2rem;
+    justify-content: space-around;
+
+    &__borrarDatos {
+        padding: 1rem;
+        p {
+            font-size: 0.8rem;
+            font-weight: weight("medium");
+        }
+    
+
+        &:hover {
+            filter: grayscale(100%);
+        }
+    }
+}
+
+#dashboard__user {
+    display: flex;
+    flex: 1;
+    @include flexCenter(column);
+    justify-content: space-between;
+    padding: 3rem 0;
+
+    img {
+        width: 60%;
+        margin-bottom: 0.5rem; 
+    }
+
+    h3 {
+        margin-bottom: 0.3rem
+    }
+
+    #location {
+        font-weight:weight(medium);
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        color: rgba(0, 0, 0, 0.5);
+        margin-top: 1rem;
+    }
+}
+
+.links {
+    @include flexCenter(column);
+    justify-content: space-around;
+    align-items: flex-start;
+    flex: 2;
+}
+
+.link {
+    display: flex;
+    margin: 1rem 0rem;
+    padding: 0rem 3rem;
+    align-items: center;
+    filter: grayscale(100%);
+
+    a {
+        display: flex;
+        align-items: center;
+        
+        h2 {
+            padding: 0rem 2rem;
+        }
+    }
+
+    &--active {
+        filter: none;
+    }
+    
+}
+
+
+
+
+.tareas { 
+    margin: 2rem;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+#noHayTareas {
+    position: relative;
+    top: 45%;
+    left: 35%;
+}
+    
+#cards {
+    flex: 7;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.card {
+    display: flex;
+    @include glass;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 1rem rgba(122,122,122, 0.2);
+
+    p {
+        font-size: 0.9rem;
+    }
+
+}
+
+.card-img {
+    @include glass;
+    box-shadow: 0 0 1rem rgba(122,122,122, 0.2);
+    flex: 1;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem 0 1rem 0;
+}
+
+.card-info {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__deadline {
+        text-transform: capitalize;
+        font-weight: weight("medium");
+        filter: grayscale(100%);
+        span {
+            font-weight: weight("bold");
+        }
+    }
+
+}
+
+.prioridad {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    font-weight: weight("bold");
+    text-transform: uppercase;
+    background: linear-gradient(280deg, #ffffb1 0, #ffff91 12.5%, #ffff6f 25%, #ffe949 37.5%, #f8d110 50%, #f0b800 62.5%, #e9a000 75%, #e48800 87.5%, #e06f00 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 0.5rem;
+}
+
+.tareas__header {
+    padding-bottom: 1rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    
+    input {
+        width:40%;
+    }
+
+    label {
+        margin-right: 1.5rem;
+    }
+
+    &__tituloOrden {
+        flex: 2;
+    }
+
+    &fechaClima {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 1rem;
+    }
+
+        #fecha_hora{
+            text-transform: uppercase;
+            font-weight: weight("bold");
+        }
+    
+        #clima {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+    
+            #iconoClima {
+                width: 3rem;
+            }
+        }
+    
+    
+}
+
+.grayOverlay {
+    position: absolute;
+    z-index: 4;
+    background-color:rgba(122,122,122, 0.2);
+    backdrop-filter: blur(1rem);
+    width: 100vw;
+    height: 100vh;
+}
+
+#grayOverlay {
+    display: none;
+}

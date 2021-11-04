@@ -1,0 +1,39 @@
+@mixin diagonal-gradient ($color-1, $color-2) {
+    background: linear-gradient(to right top, $color-1, $color-2)
+  };
+  
+  @mixin flexCenter ($direction){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+  }
+  
+  @mixin glass {
+    background: linear-gradient(
+        to right bottom, 
+        rgba(255,255,255, 0.7), 
+        rgba(255,255,255, 0.3));
+    backdrop-filter: blur(1rem);
+  }
+  
+  // @mixin theme($sunset-theme: true){
+  //     @if $sunset-theme {
+  //         $light-text: #EF8D8A;
+  //         $dark-text: #CC6A66;
+  //         $gradient-first-color : #FF80AF;
+  //         $gradient-second-color: #FFBC80;
+  //     }
+  // }
+  
+  @mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }   
+  }
+  
+  // @include respond-to('small') {
+  //     color: blue;
+  //   }
