@@ -1,4 +1,4 @@
-// //Obtener la posición y el clima
+//Obtener la posición y el clima
 const myKey = "d2f51c3b5f9ab0da898d46012c4c6c30";
 
 
