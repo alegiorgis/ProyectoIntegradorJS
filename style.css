@@ -187,3 +187,34 @@ flex-direction: column;
     left: 40%;
 }
 
+
+
+.left {
+    -moz-transform: rotate(-50deg) scaleX(-1);
+    -o-transform: rotate(-50deg) scaleX(-1);
+    -webkit-transform: rotate(-50deg) scaleX(-1);
+    transform: rotate(-50deg) scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.right {
+    -moz-transform: rotate(-50deg) scaleX(1);
+    -o-transform: rotate(-50deg) scaleX(1);
+    -webkit-transform: rotate(-50deg) scaleX(1);
+    transform: rotate(-50deg) scaleX(1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+#wunderbiene {
+    transition: transform .15s
+}
+
+#wunderbiene img {
+    width: 50px;
+    position: relative;
+    z-index: 1;
+    left:-50%;
+    top: 50px;
+}
